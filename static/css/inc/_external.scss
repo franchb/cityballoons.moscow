@@ -1,0 +1,85 @@
+/* -----------------------------------------
+	10. External Plugins
+----------------------------------------- */
+
+/* Jetpack Sharing */
+.sharedaddy {
+	margin-top: 30px;
+}
+
+/* WP Instagram */
+.null-instagram-feed {
+	p {
+		padding-top: 10px;
+	}
+}
+
+.widget {
+	.instagram-pics {
+		@include clearfix;
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			border-bottom: 0;
+			padding: 0;
+			float: left;
+			width: 33.33333333333%;
+
+			a {
+				display: block;
+				color: $text-color;
+			}
+		}
+	}
+}
+
+/* User Submitted Posts */
+div#user-submitted-posts {
+	form {
+		padding: 0;
+	}
+
+	fieldset {
+		label {
+			display: block;
+			margin-bottom: 5px;
+		}
+	}
+
+	input {
+		&.usp-input {
+			height: auto;
+		}
+	}
+
+	select {
+		@include select-style;
+		width: 80%;
+		border: 2px solid $border-color;
+		border-radius: 0;
+		color: $text-color-light;
+	}
+}
+
+.mce-btn {
+	button {
+		&:hover {
+			background: inherit;
+		}
+	}
+}
+
+.wp-core-ui {
+	input[type="button"],
+	button {
+		width: auto;
+	}
+}
+
+#usp-success-message {
+	background-color: #77bd55;
+	padding: 15px;
+	color: #fff;
+}

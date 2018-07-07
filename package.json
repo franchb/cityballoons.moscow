@@ -1,5 +1,5 @@
 {
-  "name": "atlas",
+  "name": "moscowcityballoons",
   "private": true,
   "scripts": {
     "build": "gulp build",
@@ -10,11 +10,10 @@
     "cms:delete": "gulp cms-delete"
   },
   "dependencies": {
-    "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
     "babel-register": "^6.26.0",
     "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
+    "gulp": "3.9.0",
     "gulp-autoprefixer": "^4.0.0",
     "gulp-babel": "^7.0.1",
     "gulp-concat": "^2.6.1",
@@ -30,6 +29,7 @@
     "gulp-size": "^2.1.0",
     "gulp-uglify": "^3.0.0",
     "gulp-watch": "^4.3.11",
+    "netlify-cms": "^1.9.3",
     "netlify-lambda": "^0.4.0",
     "node-sass-tilde-importer": "^1.0.2",
     "run-sequence": "^2.0.0"
@@ -38,5 +38,6 @@
     "presets": [
       "env"
     ]
-  }
+  },
+  "devDependencies": {}
 }

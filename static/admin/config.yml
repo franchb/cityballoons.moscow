@@ -1,10 +1,12 @@
 backend:
-  name: github
-  repo: repo
+  name: git-gateway
+  repo: franchb/cityballoons.moscow
   branch: master
+
+publish_mode: editorial_workflow  
   
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
+public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
   
   - name: "page"

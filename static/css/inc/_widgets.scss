@@ -1,0 +1,334 @@
+/* -----------------------------------------
+	07. Widgets Styling
+----------------------------------------- */
+.widget {
+	@include clearfix;
+	margin: 0 0 60px;
+	color: $text-color-light;
+	font-size: 14px;
+
+	/* Nullify bottom margin for last elements in widgets and sidebars */
+	.sidebar & {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+
+	select {
+		width: 100%;
+		padding: 5px 10px;
+		border-radius: 0;
+		border: 1px solid $border-color;
+	}
+}
+
+.widget-title {
+	@include line-super(20px, 3px, 10px);
+	font-size: 18px;
+	color: $text-color;
+	margin-bottom: 20px;
+
+	label {
+		text-transform: none;
+		display: block;
+		font-size: inherit;
+		margin: 0;
+		line-height: inherit;
+		font-weight: inherit;
+	}
+}
+
+/* -----------------------------------------
+	Section Widgets
+----------------------------------------- */
+.widget-padded + .widget-padded { }
+
+.widget_ci-slideshow {
+	&:first-child {
+		+ .widget-padded {
+			margin-top: -90px;
+		}
+	}
+}
+
+.widget-section {
+	margin: 0 0 90px;
+
+	&.widget-padded:last-child,
+	&.widget_ci-slideshow:last-child {
+		margin-bottom: 0;
+	}
+
+	.main-widgets & {
+		&:first-child:not(.widget_ci-slideshow) {
+			padding-top: 160px;
+		}
+	}
+}
+
+.widget-padded {
+	.widget-wrap {
+		padding: 90px 0;
+
+		&.wrap-extra-pad {
+			padding: 140px 0;
+		}
+	}
+}
+
+.widget-wrap {
+	background-position: center center;
+	background-size: cover;
+	position: relative;
+}
+
+/* WIDGET: #Item Widget
+========================================= */
+/* Slideshow */
+.item-carousel-nav {
+	position: absolute;
+	right: 0;
+	top: 0;
+	height: 24px;
+}
+
+.slick-arrow {
+	display: inline-block;
+	font-size: 21px;
+	cursor: pointer;
+	width: 26px;
+	height: 26px;
+	border: 2px solid $lighter-grey;
+	color: $lighter-grey;
+	text-align: center;
+	line-height: 1px;
+	border-radius: 50%;
+	transition: border-color     .18s ease,
+	            color            .18s ease,
+	            background-color .18s ease;
+
+	&.slick-disabled {
+		opacity: .6;
+		cursor: default;
+	}
+
+	&:first-child {
+		margin-right: 5px;
+	}
+
+	&:nth-child(2) {
+		text-indent: 2px;
+	}
+
+	&:hover {
+		border-color: $primary-color;
+		color: $text-on-primary;
+		background-color: $primary-color;
+	}
+}
+
+.slick-slide {
+	outline: 0;
+}
+
+/* WIDGET: #Newsletter
+========================================= */
+.ci-newsletter-content {
+	color: $text-color-light;
+	font-size: 14px;
+}
+
+.form-ci-newsletter {
+	position: relative;
+}
+
+.ci-newsletter-submit {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	height: calc(100% - 20px);
+	padding: 10px 16px;
+}
+
+/* WIDGET: #Instagram (section widget)
+========================================= */
+.widget-section {
+	.instagram-pics {
+		@include make-row;
+		margin-top: 0;
+		margin-bottom: 0;
+		padding: 0;
+		list-style: none;
+
+		li {
+			margin-bottom: 30px;
+
+			@include media-breakpoint-up(xs) {
+				@include make-col(6);
+			}
+			@include media-breakpoint-up(sm) {
+				@include make-col(4);
+			}
+			@include media-breakpoint-up(lg) {
+				@include make-col(3);
+			}
+		}
+	}
+}
+
+/* WIDGET: #List Widgets
+========================================= */
+.widget_meta,
+.widget_pages,
+.widget_categories,
+.widget_archive,
+.widget_nav_menu,
+.widget_recent_entries {
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		ul {
+			margin-left: 15px;
+		}
+	}
+
+	li {
+		line-height: normal;
+		display: block;
+		position: relative;
+		margin-top: 5px;
+
+		a {
+			color: $text-color-light;
+
+			&:hover {
+				color: $primary-color;
+			}
+		}
+	}
+
+	.ci-count,
+	.count {
+		margin-left: 3px;
+	}
+}
+
+.widget_recent_comments,
+.widget_rss {
+	ul {
+		margin: 0;
+		padding: 0;
+		list-style: none;
+	}
+
+	li {
+		display: block;
+		margin-bottom: 8px;
+	}
+}
+
+.widget_pages,
+.widget_categories,
+.widget_archive {
+	select {
+		@include select-style;
+	}
+}
+
+/* WIDGET: #Search
+========================================= */
+.searchform {
+	> div {
+		position: relative;
+	}
+
+	input[type="text"],
+	input[type="search"] {
+		// Styling for the search input if required
+	}
+
+	.searchsubmit {
+		position: absolute;
+		top: 10px;
+		right: 10px;
+		height: calc(100% - 20px);
+		padding: 10px 16px;
+	}
+}
+
+/* WIDGET: #Text Widget
+========================================= */
+.widget_text {
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+/* WIDGET: #Calendar
+================================================== */
+#wp-calendar {
+	width: 100%;
+
+	a {
+		font-weight: bold;
+		font-style: italic;
+	}
+
+	caption {
+		text-align: left;
+		margin-top: 10px;
+		background: none repeat scroll 0 0 rgba(0, 0, 0, .03);
+		padding: 9px;
+	}
+
+	thead {
+		font-size: 10px;
+
+		th {
+			background: rgba(0, 0, 0, .1);
+			font-weight: bold;
+			padding: 8px;
+		}
+	}
+
+	tbody {
+		td {
+			background: none;
+			border: 1px solid rgba(0, 0, 0, .1);
+			text-align: center;
+			padding: 3px;
+
+			&:hover {
+				background: rgba(0, 0, 0, .1);
+			}
+		}
+
+		.pad {
+			background: none;
+		}
+	}
+
+	tfoot {
+		#next {
+			font-size: 10px;
+			text-transform: uppercase;
+			text-align: right;
+		}
+
+		#prev {
+			font-size: 10px;
+			text-transform: uppercase;
+			padding-top: 10px;
+		}
+	}
+}

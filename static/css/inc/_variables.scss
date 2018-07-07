@@ -1,0 +1,43 @@
+// Grid
+// =========================================
+$enable-flex:         false !default;
+$enable-grid-classes: true !default;
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 544px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 576px,
+  md: 720px,
+  lg: 940px,
+	xl: 1170px
+) !default;
+
+$grid-columns:      12 !default;
+$grid-gutter-width: 30px !default;
+
+
+// Colors
+// =========================================
+$body-bg:          #ffffff !default;
+$primary-color:    #bd081c !default;
+$primary-darker:   darken($primary-color, 5%) !default;
+$text-on-primary:  #ffffff !default;
+$text-color:       #292929 !default;
+$text-color-light: #7f7f7f !default;
+$border-color:     #dfdfdf !default;
+$light-grey:       #f3f3f3 !default;
+$lighter-grey:     lighten($text-color-light, 21%) !default;
+$submenu-bg:       #1a1a1a !default;
+$submenu-color:    #ffffff !default;
+
+
+// Fonts
+// =========================================
+$primary-font: 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
+$secondary-font: 'Georgia', serif;

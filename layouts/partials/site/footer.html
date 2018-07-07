@@ -5,3 +5,16 @@
     </p>
 
 </footer>
+<!-- Netlify CMS code injection is only for index page -->
+<script>
+    if (window.netlifyIdentity) {
+      window.netlifyIdentity.on("init", user => {
+        if (!user) {
+          window.netlifyIdentity.on("login", () => {
+            document.location.href = "/admin/";
+          });
+        }
+      });
+    }
+  </script>
+  <!-- End of Netlify CMS -->
