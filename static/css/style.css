@@ -36,13 +36,18 @@ body {
   position: relative;
   line-height: 1.625;
   font-size: 16px;
-  background-color: #ffffff;
+  background-color: #fff;
   color: #292929;
   font-family: "Helvetica Neue", "Helvetica", "Arial", "Lucida Grande", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   line-height: normal;
   margin: 0 0 15px;
   word-wrap: break-word;
@@ -90,7 +95,7 @@ a {
     outline: none; }
 
 .group::after {
-  content: "";
+  content: '';
   display: table;
   clear: both; }
 
@@ -101,7 +106,8 @@ figure {
   margin: 0; }
 
 /* Lists */
-ul, ol {
+ul,
+ol {
   padding-left: 20px; }
 
 ul {
@@ -170,7 +176,12 @@ table {
   border-width: 0 1px 1px 0; }
 
 /* Code */
-code, kbd, tt, var, samp, pre {
+code,
+kbd,
+tt,
+var,
+samp,
+pre {
   font-family: monospace, serif;
   -webkit-hyphens: none;
       -ms-hyphens: none;
@@ -334,7 +345,7 @@ button {
   font-size: 13px;
   padding: 22px 36px;
   background-color: #bd081c;
-  color: #ffffff; }
+  color: #fff; }
   .btn:active,
   .comment-reply-link:active,
   input[type="submit"]:active,
@@ -346,7 +357,7 @@ button {
   input[type="submit"]:hover,
   input[type="reset"]:hover,
   button:hover {
-    color: #ffffff;
+    color: #fff;
     background-color: #a50718;
     text-decoration: none; }
   .btn:focus,
@@ -373,7 +384,7 @@ button {
   .btn-secondary:hover,
   .widget-section.null-instagram-feed p.clear a:hover {
     background-color: #bd081c;
-    color: #ffffff;
+    color: #fff;
     border-color: #bd081c; }
 
 .btn-loading::after {
@@ -507,9 +518,6 @@ button.mfp-close, button.mfp-arrow {
 .text-justified {
   text-align: justify; }
 
-/* -----------------------------------------
-	02. Main Navigation
------------------------------------------ */
 .nav {
   display: inline-block;
   -webkit-box-flex: 1;
@@ -568,14 +576,11 @@ button.mfp-close, button.mfp-arrow {
   .navigation-main > li ul a {
     font-size: 13px;
     padding: 6px 0;
-    color: #ffffff;
+    color: #fff;
     border-bottom: 1px dotted rgba(255, 255, 255, 0.18);
     /* All Other Menu Level Link Styles */ }
   .navigation-main > li ul li:last-child a {
     border-bottom: 0; }
-  .navigation-main > li ul a:hover,
-  .navigation-main > li ul .sfHover > a {
-    /* All Other Level Menu Link Hover Styles */ }
   .navigation-main > li > a:hover,
   .navigation-main > li.sfHover > a,
   .navigation-main > li.sfHover > a:active,
@@ -584,8 +589,7 @@ button.mfp-close, button.mfp-arrow {
   .navigation-main > li.current-menu-ancestor > a,
   .navigation-main > li.current-menu-parent > a,
   .navigation-main > li.current > a {
-    text-shadow: 2.828px 2.828px 0 rgba(0, 0, 0, 0.15);
-    /* WordPress First Level Current/Ancestor Hover Page Styles */ }
+    text-shadow: 2.828px 2.828px 0 rgba(0, 0, 0, 0.15); }
   .navigation-main ul {
     min-width: 190px;
     background-color: #1a1a1a;
@@ -598,7 +602,7 @@ button.mfp-close, button.mfp-arrow {
     /* Styling for navigation arrows  ---------- */ }
   .navigation-main.sf-arrows .sf-with-ul:after {
     content: '\f078';
-    font-family: FontAwesome;
+    font-family: "Font Awesome 5 Free";
     position: absolute;
     top: 50%;
     right: 0;
@@ -609,8 +613,7 @@ button.mfp-close, button.mfp-arrow {
     right: 0;
     content: "\f054";
     margin-top: -7px;
-    font-size: 9px;
-    /* Styling for right facing arrows  ---------- */ }
+    font-size: 9px; }
 
 /* -----------------------------------------
 	03. Header
@@ -624,7 +627,7 @@ button.mfp-close, button.mfp-arrow {
 
 .mast-head {
   background-color: #bd081c;
-  color: #ffffff;
+  color: #fff;
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -685,7 +688,7 @@ button.mfp-close, button.mfp-arrow {
   height: 100%;
   width: 100%;
   background-color: #bd081c;
-  color: #ffffff;
+  color: #fff;
   max-width: 0;
   overflow: hidden;
   -webkit-transition: max-width .25s ease;
@@ -700,7 +703,7 @@ button.mfp-close, button.mfp-arrow {
 
 .mast-head-search-input {
   border: 0;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #fff;
   font-size: 20px;
   background: none;
   height: calc(100% - 40px);
@@ -729,9 +732,6 @@ button.mfp-close, button.mfp-arrow {
   right: 20px;
   margin-top: -35px; }
 
-/* -----------------------------------------
-	04. Modules
------------------------------------------ */
 #page {
   max-width: 1600px;
   margin-left: auto;
@@ -769,8 +769,6 @@ button.mfp-close, button.mfp-arrow {
   .section-title .section-title-wrap {
     margin-bottom: 0; }
 
-/* Slider
-=================================== */
 .main-slider {
   position: relative;
   height: 860px;
@@ -793,7 +791,7 @@ button.mfp-close, button.mfp-arrow {
   background-size: cover;
   position: relative; }
   .main-slider-slide::before {
-    content: "";
+    content: '';
     width: 100%;
     height: 100%;
     position: absolute;
@@ -803,7 +801,7 @@ button.mfp-close, button.mfp-arrow {
     background-image: linear-gradient(to top, rgba(0, 0, 0, 0.55) 0%, transparent 40%, transparent 100%); }
   .main-slider-slide .container,
   .main-slider-slide .row,
-  .main-slider-slide [class^="col"] {
+  .main-slider-slide [class^='col'] {
     height: 100%; }
 
 .slide-content {
@@ -849,8 +847,8 @@ button.mfp-close, button.mfp-arrow {
   cursor: pointer;
   position: relative;
   top: -40px;
-  -webkit-transition: border-color     .18s ease, background-color .18s ease;
-  transition: border-color     .18s ease, background-color .18s ease; }
+  -webkit-transition: border-color .18s ease, background-color .18s ease;
+  transition: border-color .18s ease, background-color .18s ease; }
   .main-slider-nav-link:hover,
   .slick-active .main-slider-nav-link {
     background-color: #bd081c;
@@ -859,8 +857,6 @@ button.mfp-close, button.mfp-arrow {
   .main-slider-nav-link:focus {
     color: #fff; }
 
-/* Entry Item Styles
-=================================== */
 .item-list {
   margin-bottom: -40px; }
 
@@ -892,8 +888,6 @@ button.mfp-close, button.mfp-arrow {
   .entry-item-excerpt p {
     margin-bottom: 0; }
 
-/* Entry Styles
-=================================== */
 .entry {
   margin: 0 0 30px; }
   .entry:only-of-type {
@@ -921,10 +915,10 @@ button.mfp-close, button.mfp-arrow {
     -webkit-transition: none;
     transition: none;
     background-color: #bd081c;
-    color: #ffffff; }
+    color: #fff; }
     .entry-categories a::before,
     .entry-tags a::before {
-      content: "";
+      content: '';
       height: 0;
       width: 0;
       border: 9px solid #bd081c;
@@ -953,7 +947,7 @@ button.mfp-close, button.mfp-arrow {
     margin: 0;
     display: inline-block; }
     .entry-meta p + .entry-time::before {
-      content: "\2022";
+      content: '\2022';
       margin-left: 10px;
       position: relative;
       left: -7px; }
@@ -1003,7 +997,7 @@ button.mfp-close, button.mfp-arrow {
 .entry-content {
   margin-bottom: 55px; }
   .entry-content::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .entry-content blockquote {
@@ -1022,7 +1016,12 @@ button.mfp-close, button.mfp-arrow {
       position: absolute;
       left: 0;
       top: 0; }
-  .entry-content h1:not(:first-child), .entry-content h2:not(:first-child), .entry-content h3:not(:first-child), .entry-content h4:not(:first-child), .entry-content h5:not(:first-child), .entry-content h6:not(:first-child) {
+  .entry-content h1:not(:first-child),
+  .entry-content h2:not(:first-child),
+  .entry-content h3:not(:first-child),
+  .entry-content h4:not(:first-child),
+  .entry-content h5:not(:first-child),
+  .entry-content h6:not(:first-child) {
     margin-top: 50px; }
 
 .entry-section {
@@ -1050,7 +1049,7 @@ button.mfp-close, button.mfp-arrow {
       color: #292929; }
 
 .entry-author::after {
-  content: "";
+  content: '';
   display: table;
   clear: both; }
 
@@ -1069,9 +1068,8 @@ button.mfp-close, button.mfp-arrow {
   color: #292929;
   margin-bottom: 10px; }
 
-/* Media item layout */
 .entry-item-media::after {
-  content: "";
+  content: '';
   display: table;
   clear: both; }
 
@@ -1095,14 +1093,12 @@ button.mfp-close, button.mfp-arrow {
   position: static;
   font-size: 11px; }
 
-/* Pagination
-=================================== */
 .navigation {
   margin: 60px 0 0;
   text-align: center; }
   .navigation a,
   .navigation span {
-    color: #ffffff;
+    color: #fff;
     background-color: #bd081c;
     display: inline-block;
     padding: 10px 20px;
@@ -1113,9 +1109,9 @@ button.mfp-close, button.mfp-arrow {
   .navigation a:hover,
   .navigation .current {
     background-color: #a50718;
-    color: #ffffff; }
+    color: #fff; }
   .navigation .nav-links::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .navigation .nav-previous {
@@ -1130,7 +1126,7 @@ button.mfp-close, button.mfp-arrow {
   padding: 0;
   list-style: none; }
   .list-social-icons::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .list-social-icons li {
@@ -1249,7 +1245,7 @@ button.mfp-close, button.mfp-arrow {
   text-transform: uppercase;
   padding: 2px 10px;
   width: auto;
-  color: #ffffff;
+  color: #fff;
   font-weight: bold;
   margin-left: 5px;
   position: relative;
@@ -1313,16 +1309,12 @@ button.mfp-close, button.mfp-arrow {
 .bypostauthor {
   /* Author comment styles here */ }
 
-/* -----------------------------------------
-	07. Widgets Styling
------------------------------------------ */
 .widget {
   margin: 0 0 60px;
   color: #7f7f7f;
-  font-size: 14px;
-  /* Nullify bottom margin for last elements in widgets and sidebars */ }
+  font-size: 14px; }
   .widget::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .sidebar .widget:last-child {
@@ -1357,9 +1349,6 @@ button.mfp-close, button.mfp-arrow {
     line-height: inherit;
     font-weight: inherit; }
 
-/* -----------------------------------------
-	Section Widgets
------------------------------------------ */
 .widget_ci-slideshow:first-child + .widget-padded {
   margin-top: -90px; }
 
@@ -1380,9 +1369,6 @@ button.mfp-close, button.mfp-arrow {
   background-size: cover;
   position: relative; }
 
-/* WIDGET: #Item Widget
-========================================= */
-/* Slideshow */
 .item-carousel-nav {
   position: absolute;
   right: 0;
@@ -1400,8 +1386,8 @@ button.mfp-close, button.mfp-arrow {
   text-align: center;
   line-height: 1px;
   border-radius: 50%;
-  -webkit-transition: border-color     .18s ease, color            .18s ease, background-color .18s ease;
-  transition: border-color     .18s ease, color            .18s ease, background-color .18s ease; }
+  -webkit-transition: border-color .18s ease, color .18s ease, background-color .18s ease;
+  transition: border-color .18s ease, color .18s ease, background-color .18s ease; }
   .slick-arrow.slick-disabled {
     opacity: .6;
     cursor: default; }
@@ -1411,14 +1397,12 @@ button.mfp-close, button.mfp-arrow {
     text-indent: 2px; }
   .slick-arrow:hover {
     border-color: #bd081c;
-    color: #ffffff;
+    color: #fff;
     background-color: #bd081c; }
 
 .slick-slide {
   outline: 0; }
 
-/* WIDGET: #Newsletter
-========================================= */
 .ci-newsletter-content {
   color: #7f7f7f;
   font-size: 14px; }
@@ -1433,8 +1417,6 @@ button.mfp-close, button.mfp-arrow {
   height: calc(100% - 20px);
   padding: 10px 16px; }
 
-/* WIDGET: #Instagram (section widget)
-========================================= */
 .widget-section .instagram-pics {
   margin-left: -15px;
   margin-right: -15px;
@@ -1443,7 +1425,7 @@ button.mfp-close, button.mfp-arrow {
   padding: 0;
   list-style: none; }
   .widget-section .instagram-pics::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .widget-section .instagram-pics li {
@@ -1471,8 +1453,6 @@ button.mfp-close, button.mfp-arrow {
         float: left;
         width: 25%; } }
 
-/* WIDGET: #List Widgets
-========================================= */
 .widget_meta ul,
 .widget_pages ul,
 .widget_categories ul,
@@ -1551,10 +1531,8 @@ button.mfp-close, button.mfp-arrow {
   height: 40px;
   font-weight: normal;
   border: 1px solid #dfdfdf;
-  background: #ffffff; }
+  background: #fff; }
 
-/* WIDGET: #Search
-========================================= */
 .searchform > div {
   position: relative; }
 
@@ -1565,13 +1543,9 @@ button.mfp-close, button.mfp-arrow {
   height: calc(100% - 20px);
   padding: 10px 16px; }
 
-/* WIDGET: #Text Widget
-========================================= */
 .widget_text p:last-child {
   margin-bottom: 0; }
 
-/* WIDGET: #Calendar
-================================================== */
 #wp-calendar {
   width: 100%; }
   #wp-calendar a {
@@ -1606,11 +1580,6 @@ button.mfp-close, button.mfp-arrow {
     text-transform: uppercase;
     padding-top: 10px; }
 
-/* -----------------------------------------
-	08. WordPress Defaults
------------------------------------------ */
-/* Captions General
-=================================== */
 .wp-caption {
   max-width: 100%;
   margin-bottom: 15px; }
@@ -1627,14 +1596,12 @@ button.mfp-close, button.mfp-arrow {
   padding: 5px 0 0;
   text-align: left; }
 
-/* WordPress Galleries
-=================================== */
 .gallery {
   margin-left: -5px;
   margin-right: -5px;
   margin-bottom: 15px; }
   .gallery::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
 
@@ -1784,7 +1751,7 @@ button.mfp-close, button.mfp-arrow {
 
 .gallery-caption {
   background-color: rgba(0, 0, 0, 0.7);
-  color: #ffffff;
+  color: #fff;
   font-size: 12px;
   line-height: 1.5;
   margin: 0 0 0 5px;
@@ -1799,7 +1766,7 @@ button.mfp-close, button.mfp-arrow {
   -webkit-transition: opacity .18s ease;
   transition: opacity .18s ease; }
   .gallery-caption::before {
-    content: "";
+    content: '';
     height: 100%;
     min-height: 49px;
     position: absolute;
@@ -1813,9 +1780,6 @@ button.mfp-close, button.mfp-arrow {
 .gallery-columns-9 .gallery-caption {
   display: none; }
 
-/* WordPress Classes
-=================================== */
-/* Alignment */
 .alignnone {
   margin: 5px 0 20px; }
   p .alignnone {
@@ -1832,9 +1796,6 @@ button.mfp-close, button.mfp-arrow {
 .alignleft {
   float: left;
   margin: 7px 24px 7px 0; }
-
-.sticky {
-  /* Provide sticky styles */ }
 
 /* -----------------------------------------
   09.  MOBILE MENU
@@ -1873,7 +1834,7 @@ button.mfp-close, button.mfp-arrow {
   margin: 0;
   padding: 0; }
   .widget .instagram-pics::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   .widget .instagram-pics li {
@@ -1905,7 +1866,7 @@ div#user-submitted-posts select {
   height: 40px;
   font-weight: normal;
   border: 1px solid #dfdfdf;
-  background: #ffffff;
+  background: #fff;
   width: 80%;
   border: 2px solid #dfdfdf;
   border-radius: 0;

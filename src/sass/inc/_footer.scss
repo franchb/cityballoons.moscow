@@ -1,19 +1,19 @@
 /* -----------------------------------------
 	05. Footer
 ----------------------------------------- */
+
 .mast-footer {
-	padding: 110px 0 50px;
-	border-top: 1px solid $light-grey;
+    padding: 110px 0 50px;
+    border-top: 1px solid $light-grey;
 }
 
 .foot {
-	padding: 50px 0;
-	font-size: 12px;
-	text-align: center;
-	border-top: 1px solid $light-grey;
-	color: $text-color-light;
-
-	p {
-		margin: 0;
-	}
+    padding: 50px 0;
+    font-size: 12px;
+    text-align: center;
+    border-top: 1px solid $light-grey;
+    color: $text-color-light;
+    p {
+        margin: 0;
+    }
 }

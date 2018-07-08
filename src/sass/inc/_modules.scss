@@ -1,551 +1,551 @@
-/* -----------------------------------------
-	04. Modules
------------------------------------------ */
+// ----  04. Modules --------------------
+
 #page {
-	max-width: 1600px;
-	margin-left: auto;
-	margin-right: auto;
+    max-width: 1600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .main {
-	padding: 65px 0;
-
-	// Increase distance between main content and sidebar
-	> .container {
-		> .row {
-			> .col-xl-9 {
-				padding-right: 45px;
-			}
-		}
-	}
+    padding: 65px 0; // Increase distance between main content and sidebar
+    >.container {
+        >.row {
+            >.col-xl-9 {
+                padding-right: 45px;
+            }
+        }
+    }
 }
 
 .main-widgets {
-	padding: 0;
+    padding: 0;
 }
 
 .section-title-wrap {
-	position: relative;
-	margin-bottom: 40px;
+    position: relative;
+    margin-bottom: 40px;
 
-	.btn-secondary {
-		position: absolute;
-		right: 0;
-		top: 12px;
-	}
+    .btn-secondary {
+        position: absolute;
+        right: 0;
+        top: 12px;
+    }
 }
 
 .section-title {
-	@include line-super;
-	font-size: 24px;
-	margin-bottom: 40px;
+    @include line-super;
+    font-size: 24px;
+    margin-bottom: 40px;
 
-	.section-title-wrap {
-		margin-bottom: 0;
-	}
+    .section-title-wrap {
+        margin-bottom: 0;
+    }
 }
 
-/* Slider
-=================================== */
+// Slider ============
+
 .main-slider {
-	position: relative;
-	height: 860px;
-	overflow: hidden;
+    position: relative;
+    height: 860px;
+    overflow: hidden;
 
-	.slick-dots {
-		list-style: none;
-		margin: 0;
-		padding: 0;
+    .slick-dots {
+        list-style: none;
+        margin: 0;
+        padding: 0;
 
-		li {
-			display: inline-block;
-		}
-	}
+        li {
+            display: inline-block;
+        }
+    }
 }
 
 .slick-list,
 .slick-track {
-	height: 100%;
+    height: 100%;
 }
 
 .main-slider-slide {
-	height: 100%;
-	background-repeat: no-repeat;
-	background-position: top center;
-	background-size: cover;
-	position: relative;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    position: relative;
 
-	&::before {
-		content: "";
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		left: 0;
-		top: 0;
-		background-image: linear-gradient(to top, rgba(black, .55) 0%,transparent 40%, transparent 100%);
-	}
+    &::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background-image: linear-gradient(to top, rgba(black, .55) 0%, transparent 40%, transparent 100%);
+    }
 
-	.container,
-	.row,
-	[class^="col"] {
-		height: 100%;
-	}
+    .container,
+    .row,
+    [class^='col'] {
+        height: 100%;
+    }
 }
 
 .slide-content {
-	position: absolute;
-	bottom: 75px;
-	left: 15px;
-	z-index: 25;
-	color: #fff;
-	max-width: 630px;
+    position: absolute;
+    bottom: 75px;
+    left: 15px;
+    z-index: 25;
+    color: #fff;
+    max-width: 630px;
 }
 
 .slide-title {
-	font-size: 36px;
-	font-weight: bold;
-	margin: 0;
-	line-height: normal;
-	letter-spacing: -.05em;
+    font-size: 36px;
+    font-weight: bold;
+    margin: 0;
+    line-height: normal;
+    letter-spacing: -.05em;
 
-	a {
-		color: inherit;
+    a {
+        color: inherit;
 
-		&:hover {
-			color: $primary-color;
-		}
-	}
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 .main-slider-nav {
-	position: absolute;
-	z-index: 20;
-	bottom: 35px;
-	left: 0;
-	right: 0;
-	text-align: right;
+    position: absolute;
+    z-index: 20;
+    bottom: 35px;
+    left: 0;
+    right: 0;
+    text-align: right;
 }
 
 .main-slider-nav-link {
-	display: inline-block;
-	width: 26px;
-	height: 26px;
-	background-color: transparent;
-	border: 2px solid #fff;
-	border-radius: 50%;
-	color: #fff;
-	font-size: 12px;
-	font-weight: bold;
-	text-align: center;
-	line-height: 22px;
-	margin-left: 5px;
-	cursor: pointer;
-	position: relative;
-	top: -40px;
-	transition: border-color     .18s ease,
-	            background-color .18s ease;
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    background-color: transparent;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    line-height: 22px;
+    margin-left: 5px;
+    cursor: pointer;
+    position: relative;
+    top: -40px;
+    transition: border-color .18s ease, background-color .18s ease;
 
-	&:hover,
-	.slick-active & {
-		background-color: $primary-color;
-		border-color: $primary-color;
-		color: #fff;
-	}
+    &:hover,
+    .slick-active & {
+        background-color: $primary-color;
+        border-color: $primary-color;
+        color: #fff;
+    }
 
-	&:focus {
-		color: #fff;
-	}
+    &:focus {
+        color: #fff;
+    }
 }
 
-/* Entry Item Styles
-=================================== */
+// Entry Item Styles ===================
+
 .item-list {
-	margin-bottom: -40px;
+    margin-bottom: -40px;
 }
 
 .entry-item {
-	margin: 0 0 40px;
+    margin: 0 0 40px;
 
-	&:focus {
-		outline: 0;
-	}
+    &:focus {
+        outline: 0;
+    }
 }
 
 .entry-item-thumb {
-	margin-bottom: 20px;
+    margin-bottom: 20px;
 }
 
 .entry-item-content {
-	position: relative;
+    position: relative;
 }
 
 .entry-item-title {
-	font-size: 18px;
-	margin: 0;
-	padding-right: 40px;
+    font-size: 18px;
+    margin: 0;
+    padding-right: 40px;
 
-	a {
-		color: $text-color;
+    a {
+        color: $text-color;
 
-		&:hover {
-			color: $primary-color;
-		}
-	}
+        &:hover {
+            color: $primary-color;
+        }
+    }
 }
 
 .entry-item-excerpt {
-	color: $text-color-light;
-	font-size: 14px;
-	line-height: 1.4;
-	margin-top: 5px;
+    color: $text-color-light;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 5px;
 
-	p {
-		margin-bottom: 0;
-	}
+    p {
+        margin-bottom: 0;
+    }
 }
 
-/* Entry Styles
-=================================== */
-.entry {
-	margin: 0 0 30px;
+// Entry Styles ===============
 
-	&:only-of-type {
-		margin: 0;
-	}
+.entry {
+    margin: 0 0 30px;
+
+    &:only-of-type {
+        margin: 0;
+    }
 }
 
 .entry-header {
-	position: relative;
-	margin: 0 0 40px;
-	padding-right: 100px;
+    position: relative;
+    margin: 0 0 40px;
+    padding-right: 100px;
 }
 
 .entry-categories,
 .entry-tags {
-	margin-bottom: 15px;
+    margin-bottom: 15px;
 
-	a {
-		position: relative;
-		text-transform: uppercase;
-		font-weight: bold;
-		font-size: 11px;
-		display: inline-block;
-		margin: 0 10px 0 11px;
-		height: 18px;
-		padding: 2px 5px 3px 0;
-		line-height: normal;
-		transition: none;
-		background-color: $primary-color;
-		color: $text-on-primary;
+    a {
+        position: relative;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 11px;
+        display: inline-block;
+        margin: 0 10px 0 11px;
+        height: 18px;
+        padding: 2px 5px 3px 0;
+        line-height: normal;
+        transition: none;
+        background-color: $primary-color;
+        color: $text-on-primary;
 
-		&::before {
-			content: "";
-			height: 0;
-			width: 0;
-			border: 9px solid $primary-color;
-			border-left-color: transparent;
-			border-left-width: 5px;
-			position: absolute;
-			top: 0;
-			left: -11px;
-			z-index: -1;
-			transition: none;
-		}
-	}
+        &::before {
+            content: '';
+            height: 0;
+            width: 0;
+            border: 9px solid $primary-color;
+            border-left-color: transparent;
+            border-left-width: 5px;
+            position: absolute;
+            top: 0;
+            left: -11px;
+            z-index: -1;
+            transition: none;
+        }
+    }
 
-	.slide-content & {
-		margin-bottom: 0;
+    .slide-content & {
+        margin-bottom: 0;
 
-		a {
-			color: #fff;
-		}
-	}
+        a {
+            color: #fff;
+        }
+    }
 }
 
 .entry-tags {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
 .entry-meta {
-	margin-top: -5px;
-	color: $text-color-light;
-
-	p {
-		margin: 0;
-		display: inline-block;
-
-		+ .entry-time {
-			&::before {
-				content: "\2022";
-				margin-left: 10px;
-				position: relative;
-				left: -7px;
-			}
-		}
-	}
+    margin-top: -5px;
+    color: $text-color-light;
+    
+    p {
+        margin: 0;
+        display: inline-block;
+        +.entry-time {
+            &::before {
+                content: '\2022';
+                margin-left: 10px;
+                position: relative;
+                left: -7px;
+            }
+        }
+    }
 }
 
 .entry-utils {
-	position: absolute;
-	bottom: 0;
-	right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .entry-thumb {
-	margin-bottom: 40px;
+    margin-bottom: 40px;
 
-	&.alignnone,
-	&.alignleft,
-	&.alignright,
-	&.aligncenter {
-		margin-top: 0;
-	}
+    &.alignnone,
+    &.alignleft,
+    &.alignright,
+    &.aligncenter {
+        margin-top: 0;
+    }
 }
 
 .entry-like-btn,
 .entry-comment-link {
-	font-weight: bold;
-	color: $lighter-grey;
+    font-weight: bold;
+    color: $lighter-grey;
 
-	&:hover {
-		color: $text-color-light;
-	}
-	
-	i {
-		font-size: 14px;
-		position: relative;
-		top: -1px;
-	}
+    &:hover {
+        color: $text-color-light;
+    }
+
+    i {
+        font-size: 14px;
+        position: relative;
+        top: -1px;
+    }
 }
 
 .entry-like-disabled {
-	opacity: 0.6;
-	pointer-events: none;
-	position: relative;
+    opacity: 0.6;
+    pointer-events: none;
+    position: relative;
 }
 
 .entry-like-btn {
-	margin-left: 5px;
+    margin-left: 5px;
 
-	.entry-item & {
-		position: absolute;
-		top: 2px;
-		right: 0;
-		margin: 0;
-		font-size: 12px;
+    .entry-item & {
+        position: absolute;
+        top: 2px;
+        right: 0;
+        margin: 0;
+        font-size: 12px;
 
-		i {
-			position: static;
-			font-size: inherit;
-		}
-	}
+        i {
+            position: static;
+            font-size: inherit;
+        }
+    }
 
-	&.entry-liked {
-		color: $primary-color;
-	}
+    &.entry-liked {
+        color: $primary-color;
+    }
 }
 
 .entry-content {
-	@include clearfix;
-	margin-bottom: 55px;
+    @include clearfix;
+    margin-bottom: 55px;
 
-	blockquote {
-		border: 0;
-		line-height: 1.6;
-		font-size: 20px;
-		margin: 50px 0;
-		position: relative;
-		padding-left: 100px;
+    blockquote {
+        border: 0;
+        line-height: 1.6;
+        font-size: 20px;
+        margin: 50px 0;
+        position: relative;
+        padding-left: 100px;
 
-		&::before {
-			color: $light-grey;
-			content: '\201C';
-			font-size: 140px;
-			font-weight: bold;
-			line-height: 0.9;
-			position: absolute;
-			left: 0;
-			top: 0;
-		}
-	}
-
-	h1, h2, h3, h4, h5, h6 {
-		&:not(:first-child) {
-			margin-top: 50px;
-		}
-	}
+        &::before {
+            color: $light-grey;
+            content: '\201C';
+            font-size: 140px;
+            font-weight: bold;
+            line-height: 0.9;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        &:not(:first-child) {
+            margin-top: 50px;
+        }
+    }
 }
 
 .entry-section {
-	margin-bottom: 75px;
+    margin-bottom: 75px;
 
-	&:last-child {
-		margin-bottom: 0;
-	}
+    &:last-child {
+        margin-bottom: 0;
+    }
 }
 
 .entry-sharing {
-	background-color: $light-grey;
-	text-align: center;
-	padding: 15px;
+    background-color: $light-grey;
+    text-align: center;
+    padding: 15px;
 
-	a {
-		color: $text-color-light;
-		font-weight: bold;
-		text-transform: uppercase;
-		font-size: 11px;
-		margin: 0 8px;
+    a {
+        color: $text-color-light;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 11px;
+        margin: 0 8px;
 
-		i {
-			color: $text-color;
-			font-size: 18px;
-			position: relative;
-			top: 2px;
-			margin-right: 2px;
-		}
+        i {
+            color: $text-color;
+            font-size: 18px;
+            position: relative;
+            top: 2px;
+            margin-right: 2px;
+        }
 
-		&:hover {
-			color: $text-color;
-		}
-	}
+        &:hover {
+            color: $text-color;
+        }
+    }
 }
 
 .entry-author {
-	@include clearfix;
+    @include clearfix;
 }
 
 .entry-author-thumb {
-	width: 165px;
-	float: left;
-	margin-right: 30px;
+    width: 165px;
+    float: left;
+    margin-right: 30px;
 }
 
 .entry-author-content {
-	overflow: hidden;
-	color: $text-color-light;
-	font-size: 14px;
+    overflow: hidden;
+    color: $text-color-light;
+    font-size: 14px;
 }
 
 .entry-author-title {
-	font-size: 18px;
-	color: $text-color;
-	margin-bottom: 10px;
+    font-size: 18px;
+    color: $text-color;
+    margin-bottom: 10px;
 }
 
-/* Media item layout */
+// Media item layout
+
 .entry-item-media {
-	@include clearfix;
+    @include clearfix;
 
-	.entry-item-thumb {
-		width: 100px;
-		float: left;
-		margin-right: 15px;
-	}
+    .entry-item-thumb {
+        width: 100px;
+        float: left;
+        margin-right: 15px;
+    }
 
-	.entry-item-content {
-		overflow: hidden;
-		padding-top: 12px;
-	}
+    .entry-item-content {
+        overflow: hidden;
+        padding-top: 12px;
+    }
+    
+    .entry-item-title {
+        font-size: 14px;
+        padding: 0;
+    }
 
-	.entry-item-title {
-		font-size: 14px;
-		padding: 0;
-	}
-
-	.entry-item-excerpt {
-		font-size: 12px;
-	}
-
-	.entry-like-btn {
-		position: static;
-		font-size: 11px;
-	}
+    .entry-item-excerpt {
+        font-size: 12px;
+    }
+    
+    .entry-like-btn {
+        position: static;
+        font-size: 11px;
+    }
 }
 
-/* Pagination
-=================================== */
+// Pagination =========================
+
 .navigation {
-	margin: 60px 0 0;
-	text-align: center;
+    margin: 60px 0 0;
+    text-align: center;
+    a,
+    span {
+        color: $text-on-primary;
+        background-color: $primary-color;
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 0 5px 3px;
+        text-transform: uppercase;
+        font-size: 13px;
+        font-weight: bold;
+    }
 
-	a,
-	span {
-		color: $text-on-primary;
-		background-color: $primary-color;
-		display: inline-block;
-		padding: 10px 20px;
-		margin: 0 5px 3px;
-		text-transform: uppercase;
-		font-size: 13px;
-		font-weight: bold;
-	}
+    a:hover,
+    .current {
+        background-color: $primary-darker;
+        color: $text-on-primary;
+    }
 
-	a:hover,
-	.current {
-		background-color: $primary-darker;
-		color: $text-on-primary;
-	}
+    .nav-links {
+        @include clearfix();
+    }
 
-	.nav-links {
-		@include clearfix();
-	}
+    .nav-previous {
+        float: left;
+    }
 
-	.nav-previous {
-		float: left;
-	}
-
-	.nav-next {
-		float: right;
-	}
+    .nav-next {
+        float: right;
+    }
 }
 
 .post-navigation {
-	// Styles specific to post navigation
+    // Styles specific to post navigation
 }
 
 /* Social Icons
 =================================== */
-.list-social-icons {
-	@include clearfix;
-	margin: 0;
-	padding: 0;
-	list-style: none;
 
-	li {
-		float: left;
-		margin-right: 5px;
-	}
+.list-social-icons {
+    @include clearfix;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        margin-right: 5px;
+    }
 }
 
 .social-icon {
-	display: inline-block;
-	width: 32px;
-	height: 32px;
-	line-height: 30px;
-	font-size: 16px;
-	text-align: center;
-	color: $lighter-grey;
-	border: 2px solid $lighter-grey;
-	background-color: transparent;
-	border-radius: 50%;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    line-height: 30px;
+    font-size: 16px;
+    text-align: center;
+    color: $lighter-grey;
+    border: 2px solid $lighter-grey;
+    background-color: transparent;
+    border-radius: 50%;
 
-	&:hover {
-		color: $primary-color;
-		border-color: $primary-color;
-	}
+    &:hover {
+        color: $primary-color;
+        border-color: $primary-color;
+    }
 
-	.entry-author & {
-		border: 0;
-		color: $text-color;
-		padding: 0;
-		width: auto;
-		height: auto;
-		line-height: normal;
-		font-size: 18px;
-		margin-right: 3px;
+    .entry-author & {
+        border: 0;
+        color: $text-color;
+        padding: 0;
+        width: auto;
+        height: auto;
+        line-height: normal;
+        font-size: 18px;
+        margin-right: 3px;
 
-		&:hover {
-			color: $text-color;
-		}
-	}
+        &:hover {
+            color: $text-color;
+        }
+    }
 }

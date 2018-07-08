@@ -195,7 +195,7 @@ th {
   padding-left: 15px;
   padding-right: 15px; }
   .container::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
   @media (min-width: 544px) {
@@ -217,7 +217,7 @@ th {
   padding-left: 15px;
   padding-right: 15px; }
   .container-fluid::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
 
@@ -225,7 +225,7 @@ th {
   margin-left: -15px;
   margin-right: -15px; }
   .row::after {
-    content: "";
+    content: '';
     display: table;
     clear: both; }
 

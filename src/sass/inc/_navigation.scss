@@ -1,119 +1,135 @@
-/* -----------------------------------------
-	02. Main Navigation
------------------------------------------ */
+// ----------- 02. Main Navigation -------
 
 .nav {
-	display: inline-block;
-	flex: 1 0 auto;
-	padding: 0 15px;
+    display: inline-block;
+    flex: 1 0 auto;
+    padding: 0 15px;
 }
 
 .nav ul {
-	margin: 0;
-	padding: 0;
-	list-style: none;
+    margin: 0;
+    padding: 0;
+    list-style: none;
 }
 
 .navigation-main {
-	text-align: center;
+    text-align: center; // Navigation functional styles
 
-   // Navigation functional styles
- 	li { position: relative; z-index: 100; }
- 	> li { display: inline-block; }
- 	ul { position: absolute; z-index: 300; top: -999em; }
- 	li:hover > ul,
- 	.sfHover > ul { top: auto; margin-left: -12px; }
- 	li li:hover > ul,
- 	li .sfHover > ul { top: 0; left: 100%; margin: -13px 0 0 10px; }
- 	li li li:hover > ul,
- 	li li .sfHover > ul { top: 0; left: 100%; }
- 	a { display: block; white-space: nowrap; }
+    li {
+        position: relative;
+        z-index: 100;
+    }
 
-  a {
-    text-align: left;
-		transition: text-shadow .18s ease;
-    /* Global Menu Link Styles */
-  }
+    >li {
+        display: inline-block;
+    }
 
-  > li:first-child > a { }
-  > li:last-child > a { }
+    ul {
+        position: absolute;
+        z-index: 300;
+        top: -999em;
+    }
 
-  a:hover,
-  .sfHover > a {
-    text-decoration: none;
-    /* First Level & Global Menu Link Hover Styles */
-  }
+    li:hover>ul,
+    .sfHover>ul {
+        top: auto;
+        margin-left: -12px;
+    }
 
-  > li > a {
-		font-size: 20px;
-		padding: 12px 0;
-		margin: 0 10px;
-		font-weight: bold;
-		letter-spacing: -.01em;
-    /* First Level Menu Link Styles */
-  }
+    li li:hover>ul,
+    li .sfHover>ul {
+        top: 0;
+        left: 100%;
+        margin: -13px 0 0 10px;
+    }
 
-  > li ul a {
-		font-size: 13px;
-		padding: 6px 0;
-		color: $submenu-color;
-		border-bottom: 1px dotted rgba($submenu-color, .18);
-    /* All Other Menu Level Link Styles */
-  }
+    li li li:hover>ul,
+    li li .sfHover>ul {
+        top: 0;
+        left: 100%;
+    }
 
-	> li ul li:last-child a {
-		border-bottom: 0;
-	}
+    a {
+        display: block;
+        white-space: nowrap;
+    }
 
-  > li ul a:hover,
-  > li ul .sfHover > a {
+    a {
+        text-align: left;
+        transition: text-shadow .18s ease;
+        /* Global Menu Link Styles */
+    }
+    >li:first-child>a {}
+    >li:last-child>a {}
+    a:hover,
+    .sfHover>a {
+        text-decoration: none;
+        /* First Level & Global Menu Link Hover Styles */
+    }
+    >li>a {
+        font-size: 20px;
+        padding: 12px 0;
+        margin: 0 10px;
+        font-weight: bold;
+        letter-spacing: -.01em;
+        /* First Level Menu Link Styles */
+    }
+    >li ul a {
+        font-size: 13px;
+        padding: 6px 0;
+        color: $submenu-color;
+        border-bottom: 1px dotted rgba($submenu-color, .18);
+        /* All Other Menu Level Link Styles */
+    }
+    >li ul li:last-child a {
+        border-bottom: 0;
+    }
+    >li ul a:hover,
+    >li ul .sfHover>a {
+        // All Other Level Menu Link Hover Styles 
+    }
+    >li>a:hover,
+    >li.sfHover>a,
+    >li.sfHover>a:active,
+    >li.current_page_item>a,
+    >li.current-menu-item>a,
+    >li.current-menu-ancestor>a,
+    >li.current-menu-parent>a,
+    >li.current>a {
+        text-shadow: 2.828px 2.828px 0 rgba(0, 0, 0, .15);
+        // WordPress First Level Current/Ancestor Hover Page Styles 
+    }
 
-    /* All Other Level Menu Link Hover Styles */
-  }
+    ul {
+        min-width: 190px;
+        background-color: $submenu-bg;
+        border: 3px solid $primary-color;
+        padding: 10px 20px;
+        /* All Lower Level Menu Container Styles */
+    }
 
-  > li > a:hover,
-  > li.sfHover > a,
-  > li.sfHover > a:active,
-  > li.current_page_item > a,
-  > li.current-menu-item > a,
-  > li.current-menu-ancestor > a,
-  > li.current-menu-parent > a,
-  > li.current > a {
-		text-shadow: 2.828px 2.828px 0 rgba(0,0,0,.15);
-   /* WordPress First Level Current/Ancestor Hover Page Styles */
-  }
+    a.sf-with-ul {
+        padding-right: 10px;
+        position: relative;
+        /* Styling for navigation arrows  ---------- */
+    }
 
-  ul {
-		min-width: 190px;
-		background-color: $submenu-bg;
-		border: 3px solid $primary-color;
-		padding: 10px 20px;
-    /* All Lower Level Menu Container Styles */
-  }
+    &.sf-arrows .sf-with-ul:after {
+        content: '\f078';
+        font-family: "Font Awesome 5 Free";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        margin-top: -8px;
+        font-size: 7px;
+        font-weight: normal;
+    }
 
-  a.sf-with-ul {
-    padding-right: 10px;
-    position: relative;
-    /* Styling for navigation arrows  ---------- */
-  }
-
-  &.sf-arrows .sf-with-ul:after {
-    content: '\f078';
-		font-family: FontAwesome;
-    position: absolute;
-    top: 50%;
-		right: 0;
-		margin-top: -8px;
-		font-size: 7px;
-		font-weight: normal;
-  }
-
-  &.sf-arrows ul .sf-with-ul:after {
- 		right: 0;
-		content: "\f054";
-		margin-top: -7px;
-		font-size: 9px;
-
-    /* Styling for right facing arrows  ---------- */
-  }
+    &.sf-arrows ul .sf-with-ul:after {
+        right: 0;
+        content: "\f054";
+        margin-top: -7px;
+        font-size: 9px;
+        // Styling for right facing arrows  --------
+    }
 }
