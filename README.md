@@ -176,4 +176,6 @@ You can deploy directly to Netlify using this button:
 
 ## License
 
+https://forestry.io/blog/search-with-algolia-in-hugo/
+
 MIT © [Indigo Tree](https://indigotree.co.uk)
