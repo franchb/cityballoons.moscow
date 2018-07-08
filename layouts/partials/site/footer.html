@@ -1,20 +1,83 @@
-<footer class="site-footer" role="contentinfo">
-
-    <p class="site-footer__copyright">
-        &copy; {{ now.Format "2006" }} &middot; <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
-    </p>
-
-</footer>
+  <footer class="footer" role="contentinfo">
+    <div class="mast-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3 col-xs-12">
+            <aside class="widget widget_text group">
+              <h3 class="widget-title">Moscow City Balloons</h3>
+              <p>Студия оформления воздушными шарами Moscow City Ballons создана в 2018 году.</p>
+            </aside>
+            <!-- /widget -->
+          </div>
+          <div class="col-lg-3 col-xs-12">
+            <aside class="widget widget_categories group">
+              <h3 class="widget-title">Что можно заказать?</h3>
+              <ul>
+                <li><a href="#">Оформление воздушными шарами</a></li>
+                <li><a href="#">Доставка букетов из воздушных шаров</a>
+                  <ul class="children">
+                    <li><a href="">Букет на день рождения</a></li>
+                    <li><a href="">Композиция из шаров любимым</a></li>
+                    <li><a href="">Воздушные шары ребёнку на день рождения</a>
+                      <ul class="chldren">
+                        <li><a href="">Шарики с Микки-маусом</a></li>
+                        <li><a href="">Шарики с мультяшными героями</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="#">Воздушные шары для корпоративных мероприятий</a></li>
+              </ul>
+            </aside>
+            <!-- /widget -->
+          </div>
+          <div class="col-lg-3 col-xs-12">
+            <aside class="widget widget_text group">
+              <h3 class="widget-title">Text Widget</h3>
+              <p>Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet egestas purus in blandit. Curabitur vulputate, ligula lacinia scelerisque tempor, lacus lacus ornare ante. Nulla at nulla justo, eget luctus tortor. Nulla facilisi. Duis aliquet
+                egestas purus.</p>
+            </aside>
+            <!-- /widget -->
+          </div>
+          <div class="col-lg-3 col-xs-12">
+            <!-- For a list of all supported social icons please see: http://fontawesome.io/icons/#brand -->
+            <aside class="widget widget_ci_social_widget ci-socials group">
+              <h3 class="widget-title">MCB в соцсетях</h3>
+              <ul class="list-social-icons">
+                <li><a class="social-icon" href="#"><i class="fas fa-rss"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-vk"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-twitter"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-pinterest-p"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-medium-m"></i></a></li>
+                <li><a class="social-icon" href="#"><i class="fab fa-telegram-plane"></i></a></li>
+              </ul>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12">
+            <p>Сайт разработан &ndash; в студии <a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>. Все права на изображения принадлежат их законным правообладателям. &copy; {{ now.Format "2006" }} &middot; Права тексты, компоновку и торговую марку Moscow City Balloons принадлежат ИП Титов Михаил Сергеевич ИНН 123456789.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 <!-- Netlify CMS code injection is only for index page -->
 <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user) {
-          window.netlifyIdentity.on("login", () => {
-            document.location.href = "/admin/";
-          });
-        }
-      });
-    }
-  </script>
-  <!-- End of Netlify CMS -->
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", user => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>
+<!-- End of Netlify CMS -->

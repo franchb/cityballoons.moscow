@@ -1,12 +1,12 @@
 baseURL = "/"
 languageCode = "en-gb"
-title = "{TITLE}"
+title = "MOSCOW CITY BALLOONS"
 
 enableRobotsTXT = true
 disableAliases = true
 
 [params]
-disallow_search_engines = false # set robots.txt to disallow everything
+disallow_search_engines = true # set robots.txt to disallow everything
 
 # add redirects/headers
 [outputs]

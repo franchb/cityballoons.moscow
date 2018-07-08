@@ -1,5 +1,59 @@
-<header class="site-header" role="banner">
-
-    <strong><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></strong>
-    
+<header class="header" role="banner">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12">
+                <div class="mast-head">
+                    <div class="mast-head-search">
+                        <form action="/" class="mast-head-search-form"> <label for="mast-head-search-input" class="sr-only">Поиск:</label> <input type="text" id="mast-head-search-input" class="mast-head-search-input" placeholder="Enter your search and press return"> <a href="#" class="mast-head-search-dismiss">&times;</a>										</form>
+                    </div>
+                    <div class="mast-head-branding">
+                        <h1 class="site-logo">
+                            <a href="{{ .Site.BaseURL }}"> <img src="images/logo.png" alt="{{ .Site.Title }}"> </a>
+                        </h1>
+                    </div>
+                    <nav class="nav">
+                        <ul class="navigation-main">
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="blog.html">Блог</a>
+                                <ul>
+                                    <li><a href="single.html">Последний пост с фото</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="listing-default.html">Все фотографии</a>
+                                <ul>
+                                    <li><a href="listing-default.html">Listing Default</a></li>
+                                    <li><a href="listing-masonry.html">Listing Masonry</a>
+                                        <ul>
+                                            <li><a href="#">Submenu Example</a></li>
+                                            <li><a href="#">Submenu Example</a></li>
+                                            <li><a href="#">Submenu Example</a></li>
+                                            <li><a href="#">Submenu Example</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="listing-3columns.html">Listing 3 Columns</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="page.html">Цены</a>
+                                <ul>
+                                    <li><a href="page.html">Page Default</a></li>
+                                    <li><a href="page-fullwidth.html">Page Fullwidth</a></li>
+                                    <li><a href="page-narrow.html">Page Narrow</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="page-narrow.html">Заказать онлайн</a>
+                            </li>
+                            <li><a href="page-narrow.html">Контакты</a>
+                            </li>                                                  
+                        </ul>
+                    </nav>
+                    <div id="mobilemenu"></div>
+                    <div class="mast-head-utils">
+                        <a href="#" class="btn-add-post"> <i class="fas fa-plus-circle"></i> </a>
+                        <a href="#" class="trigger-search"> <i class="fas fa-search"></i> </a>
+                        <a href="#mobilemenu" class="mobile-menu-trigger"> <i class="fas fa-bars"></i> <span class="mobile-menu-trigger-label">Menu</span> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
